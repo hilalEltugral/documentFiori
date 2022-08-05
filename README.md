@@ -1,2 +1,2 @@
 # documentFiori
-Document Management
+Document Management for Fiori App
