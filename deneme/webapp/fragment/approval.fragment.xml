@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Dialog id="idOnay"  title="Uyarı">
+		<Vbox>
+			<Text  text=" Are you sure you want to delete?"></Text>
+		</Vbox>
+		<beginButton>
+			<Button text="Yes" press="onSave" type="Accept"/>
+		</beginButton>
+		<endButton>
+			<Button press="onCloseDialog" type="Reject" text="Cancel"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

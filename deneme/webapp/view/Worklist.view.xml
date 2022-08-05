@@ -1,0 +1,63 @@
+<mvc:View controllerName="deneme.deneme.controller.Worklist" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:upload="sap.m.upload"
+	xmlns:semantic="sap.f.semantic">
+	<semantic:SemanticPage id="page" headerPinnable="false" toggleHeaderOnTitleClick="false">
+		<semantic:titleHeading>
+			<Title text="Document Management"/>
+		</semantic:titleHeading>
+		<semantic:content>
+			<VBox>
+				<upload:UploadSet uploadUrl="/sap/opu/odata/sap/ZHE_GOS_SRV/AttachmentSet" id="UploadSet" instantUpload="true" showIcons="true"
+					visible="{worklistView>/page/editable}" terminationEnabled="true" maxFileNameLength="55" beforeUploadStarts="onBeforeUploadStarts"
+					uploadCompleted="onUploadCompleted" class="sapUiResponsiveMargin"/>
+				<!--<Button text="silme" press="onDelete"></Button>-->
+				<Table id="table" width="auto" items="{ path: 'documentModel>/'}" noDataText="{worklistView>/tableNoDataText}"
+					busyIndicatorDelay="{worklistView>/tableBusyDelay}" growing="true" growingScrollToLoad="true" updateFinished="onUpdateFinished">
+					<headerToolbar>
+						<Toolbar>
+							<ToolbarSpacer/>
+						</Toolbar>
+					</headerToolbar>
+					<columns>
+						<Column >
+							<Text text="File Name"/>
+						</Column>
+						<Column >
+							<Text text="File Type"/>
+						</Column>
+						<Column >
+							<Text text="Creation Date"/>
+						</Column>
+						<Column >
+							<Text text="Creator"/>
+						</Column>
+						<Column width="5em">
+							<Text text=""/>
+						</Column>
+						<Column width="5em">
+							<Text text=""/>
+						</Column>
+						<Column width="5em">
+							<Text text=""/>
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem>
+							<cells>
+								<Text text="{documentModel>Name}"/>
+								<Text text="{documentModel>fileext}"/>
+								<Text text="{path: 'documentModel>FileDate', type: 'sap.ui.model.type.Date', formatOptions: { style: 'medium'}}"/>
+								<Text text="{documentModel>FileCreator}"/>
+								<Button type="Ghost" icon="sap-icon://detail-view" press="onRead"></Button>
+								<Button type="Accept" icon="sap-icon://download" press="onDownload"></Button>
+								<Button type="Reject" icon="sap-icon://delete" press="onDelete"></Button>
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+					<Toolbar>
+							<ToolbarSpacer/>
+						</Toolbar>
+			</VBox>
+		</semantic:content>
+	</semantic:SemanticPage>
+</mvc:View>

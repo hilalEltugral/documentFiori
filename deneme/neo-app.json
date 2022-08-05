@@ -1,0 +1,52 @@
+{
+	"routes": [{
+		"path": "/webapp/resources",
+		"target": {
+			"type": "service",
+			"name": "sapui5",
+			"entryPath": "/resources",
+			"version": "1.71.17"
+		},
+		"description": "SAPUI5 Resources"
+	}, {
+		"path": "/webapp/test-resources",
+		"target": {
+			"type": "service",
+			"name": "sapui5",
+			"entryPath": "/test-resources",
+			"version": "1.71.17"
+		},
+		"description": "SAPUI5 Test Resources"
+	}, {
+		"path": "/resources",
+		"target": {
+			"type": "service",
+			"name": "sapui5",
+			"entryPath": "/resources",
+			"version": "1.71.17"
+		},
+		"description": "SAPUI5 Resources"
+	}, {
+		"path": "/test-resources",
+		"target": {
+			"type": "service",
+			"name": "sapui5",
+			"entryPath": "/test-resources",
+			"version": "1.71.17"
+		},
+		"description": "SAPUI5 Test Resources"
+	}, {
+		"path": "/sap/opu/odata",
+		"target": {
+			"type": "destination",
+			"name": "IDES",
+			"entryPath": "/sap/opu/odata"
+		},
+		"description": "IDES"
+	}],
+	"welcomeFile": "/webapp/index.html",
+	"headerWhiteList": ["Content-Disposition",
+		"content-disposition"
+	],
+	"sendWelcomeFileRedirect": true
+}
