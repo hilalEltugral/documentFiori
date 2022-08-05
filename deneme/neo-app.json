@@ -1,4 +1,5 @@
 {
+	
 	"routes": [{
 		"path": "/webapp/resources",
 		"target": {
