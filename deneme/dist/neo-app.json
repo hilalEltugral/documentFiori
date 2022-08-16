@@ -1,6 +1,6 @@
 {
 	"routes": [{
-		"path": "/webapp/resources",
+		"path": "/resources",
 		"target": {
 			"type": "service",
 			"name": "sapui5",
@@ -9,7 +9,7 @@
 		},
 		"description": "SAPUI5 Resources"
 	}, {
-		"path": "/webapp/test-resources",
+		"path": "/test-resources",
 		"target": {
 			"type": "service",
 			"name": "sapui5",
@@ -44,9 +44,7 @@
 		},
 		"description": "IDES"
 	}],
-	"welcomeFile": "/webapp/index.html",
-	"headerWhiteList": ["Content-Disposition",
-		"content-disposition"
-	],
+	"welcomeFile": "/index.html",
+	"headerWhiteList": ["Content-Disposition", "content-disposition"],
 	"sendWelcomeFileRedirect": true
 }
